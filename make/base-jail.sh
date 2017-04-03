@@ -41,9 +41,10 @@ apt-get -y --force-yes install \
    pkg-config libgl1-mesa-dev libgles2-mesa-dev \
    libgstreamer1.0-dev \
    gstreamer1.0-plugins-{bad,base,good,ugly} \
-   gstreamer1.0-{omx,alsa} python-dev cython
+   gstreamer1.0-{omx,alsa} python-dev
 apt-get -y --force-yes install libmtdev1
 
+pip install -I Cython==0.23
 pip install git+https://github.com/kivy/kivy.git@master
 
 apt-get clean
