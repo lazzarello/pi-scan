@@ -259,7 +259,7 @@ class Camera:
 
   def makeOptions(self):
     options = {}
-    options['svm'] = chdkptp.util.iso_to_sv96(100)
+    options['svm'] = chdkptp.util.iso_to_av96(100)
     options['tv'] = chdkptp.util.shutter_to_tv96(self.calculate_shutter())
     options['nd'] = 2
     options['fformat'] = 1
