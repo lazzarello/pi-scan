@@ -259,7 +259,8 @@ class Camera:
 
   def makeOptions(self):
     options = {}
-    options['svm'] = chdkptp.util.iso_to_av96(100)
+    # TODO: the Lua API for this function changed. this method no longer works with chdkptp.py HEAD 
+    #options['svm'] = chdkptp.util.iso_to_av96(100)
     options['tv'] = chdkptp.util.shutter_to_tv96(self.calculate_shutter())
     options['nd'] = 2
     options['fformat'] = 1
