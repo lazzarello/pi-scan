@@ -389,7 +389,7 @@ class StartScreen(Screen):
         waitString = 'Syncing to disk. Waiting %0.0f more seconds before force ejecting.' % timeLeft
       self.syncWait += dt
       self.powerOff.text = waitString + ' [color=ff3333]Do not power off.[/color]'
-    self.manager.mountPoint = None
+    self.manager.mountPoint = "/home/pi/logs"
     if ((odd.camera is not None and odd.camera.is_connected()) or
         (even.camera is not None and even.camera.is_connected())):
       self.cameraOffButton.opacity = 1.0
@@ -411,7 +411,7 @@ class StartScreen(Screen):
 
   def beginAction(self):
     self.manager.transition.direction = 'left'
-    self.manager.current = 'configure-disk'
+    self.manager.current = 'configure-camera'
 
   def quitAction(self):
     os.system('killall run-pi-scan.sh python')
